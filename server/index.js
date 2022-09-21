@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from 'dotenv';
 import sequelize from './db.config.js'
+import models from './models/models.js'
 
 dotenv.config();
 
