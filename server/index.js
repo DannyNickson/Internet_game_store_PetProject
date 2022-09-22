@@ -17,9 +17,6 @@ app.use(express.json())
 app.use('/api',router)
 app.use(errorHandler)
 
-app.get('/',(req,res)=>{
-    res.status(200).json({message:"WORKING!!!"})
-})
 
 const start = async () => {
     console.log();
