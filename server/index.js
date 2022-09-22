@@ -4,7 +4,7 @@ import sequelize from './db.config.js'
 import * as model from './models/models.js'
 import cors from 'cors'
 import router from './routes/index.js'
-
+import errorHandler from './middleware/ErrorHandlingMiddleware.js'
 
 
 dotenv.config();
@@ -15,6 +15,7 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 app.use('/api',router)
+app.use(errorHandler)
 
 app.get('/',(req,res)=>{
     res.status(200).json({message:"WORKING!!!"})
