@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import UserStore from './store/UserStore';
 
-const Context = createContext(null)
+export const Context = createContext(null)
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
