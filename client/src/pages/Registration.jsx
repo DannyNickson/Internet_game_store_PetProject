@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import CustomInput from "./UI/CustomInput/CustomInput";
+import CustomInput from "./../components/UI/CustomInput/CustomInput";
 import "../styles/App.css";
 import { useState } from "react";
-import CustomButton from "./UI/CustomButton/CustomButton";
 import UserService from "../API/UsersService";
+import CustomButton from './../components/UI/CustomButton/CustomButton';
 
 const Registration = (props) => {
   const [username, setUsername] = useState("");
