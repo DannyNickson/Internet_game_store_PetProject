@@ -1,10 +1,11 @@
-import Registration from "./components/Registration";
 import './styles/App.css'
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from './components/AppRouter';
 function App() {
   return (
-    <div className="main">
-      <Registration/>
-    </div>
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
   );
 }
 
