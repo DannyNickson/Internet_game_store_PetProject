@@ -1,9 +1,9 @@
-
-
+import Registration from "./components/Registration";
+import './styles/App.css'
 function App() {
   return (
-    <div>
-      WORKING!
+    <div className="main">
+      <Registration/>
     </div>
   );
 }
