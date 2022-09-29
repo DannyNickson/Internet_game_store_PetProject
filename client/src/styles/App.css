@@ -1,74 +1,77 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 0;
+}
 
-  .main{
-    width: 800px;
-  }
-  
-  .conteiner{
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: right;
-  }
-  
-  .input__conteiner{
-    display: flex;
-    align-items: center;
-  }
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #171a21;
+}
 
-  .input__text{
-    font-size: 20px;
-    padding: 10px;
-  }
-  
-  .errorVisible{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+a {
+  text-decoration: none;
+}
 
-  }
-  .errorText{
-    color: red;
-    font-size: 20px;
-  }
-  .user__container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  .user__block{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    font-size: 18px;
-  }
-  .user__title{
-    padding: 2px;
-    margin: 5px;
-    color:blueviolet;
-  }
-  .user__email{
-    padding: 2px;
-    margin: 5px;
-    color:blueviolet;
-  }
+.main {
+  width: 800px;
+}
 
-  .button__container
-  {
-    display: flex;
-    justify-content: center;
-  }
-  
-  
+.conteiner {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: right;
+}
+
+.input__conteiner {
+  display: flex;
+  align-items: center;
+}
+
+.input__text {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.errorVisible {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.errorText {
+  color: red;
+  font-size: 20px;
+}
+.user__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.user__block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 18px;
+}
+.user__title {
+  padding: 2px;
+  margin: 5px;
+  color: blueviolet;
+}
+.user__email {
+  padding: 2px;
+  margin: 5px;
+  color: blueviolet;
+}
+
+.button__container {
+  display: flex;
+  justify-content: center;
+}
