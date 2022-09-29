@@ -1,102 +1,76 @@
 import React, { useEffect } from "react";
 import CustomInput from "./../components/UI/CustomInput/CustomInput";
-import "../styles/App.css";
+import "../styles/pagesStyles/RegistrationPageStyles.css";
 import { useState } from "react";
 import UserService from "../API/UsersService";
-import CustomButton from './../components/UI/CustomButton/CustomButton';
+import CustomButton from "./../components/UI/CustomButton/CustomButton";
 
 const Registration = (props) => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorVisible, setErrorVisible] = useState({ status: false, text: "" });
-  const [users, setUsers] = useState([
-    { id: 1, username: "MrDD", email: "puchkovdd@gmail.com" },
-  ]);
-
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
-  async function fetchUsers() {
-    const allUsers = await UserService.getAll();
-    setUsers([...allUsers]);
+  const [selected, setSelected] = useState(true);
+  function changeSelected(event)
+  {
+    event.preventDefault();
+    setSelected((prev)=>{
+      return !prev;
+    })
   }
-
-  async function sendData(username, email, password) {
-    if (!username || !email || !password) {
-      setErrorVisible({ status: true, text: "Не задано поле" });
-      return;
-    }
-    errorVisible.status
-      ? setErrorVisible({ status: false, text: "" })
-      : setErrorVisible({ status: false });
-    const responese = await UserService.registrationUser({
-      username,
-      email,
-      password,
-    });
-    setAllClear(users,responese.data)
-  }
-
-  function setAllClear(users, data) {
-    setUsers([...users, data]);
-    setEmail(" ");
-    setPassword(" ");
-    setUsername(" ");
-  }
-
   return (
-    <div className="conteiner">
-      <div className={errorVisible.status ? " errorVisible active" : "hide"}>
-        <h1 className="errorText">{errorVisible.text}</h1>
-      </div>
-      <div className="input__conteiner">
-        <div className="input__text">Input your username:</div>
-        <CustomInput
-          onChange={(e) => {
-            setUsername(e.target.value);
-          }}
-          type="text"
-          placeholder="username"
-        />
-      </div>
-      <div className="input__conteiner">
-        <div className="input__text">Input your email:</div>
-        <CustomInput
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          type="text"
-          placeholder="email"
-        />
-      </div>
-      <div className="input__conteiner">
-        <div className="input__text">Input your password:</div>
-        <CustomInput
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          type="password"
-          placeholder="password"
-        />
-      </div>
-      <div className="button__container">
-      <CustomButton
-        onClick={() => {
-          sendData(username, email, password);
-        }}
-      >
-        Send
-      </CustomButton>
-      </div>
-      <div className="user__container">
-        {users.map((user) => (
-          <div className="user__block" key={user.id}>
-            <div className="user__title">{user.username}</div>
-            <div className="user__email">{user.email}</div>
+    <div className="main__block">
+      <div className={selected ? "login__container selected" : "login__container"}>
+        <div className="login__title">SING IN</div>
+        <div className="login__block">
+          <div className="input__blocks">
+            <div className="login__input">
+              <div className="input__text">Sing in whith account name</div>
+              <input type="text" />
+            </div>
+            <div className="password__input">
+              <div className="input__text">Password</div>
+              <input type="password" />
+            </div>
+            <div className="login__btn__submit">
+              <button>Sing in</button>
+            </div>
+            <div className="error__text hide">
+              Please check your password and acount name and try again.
+            </div>
+            <div className="help__btn">
+              <a href="/" onClick={(e)=>{changeSelected(e)}}>I don`t have account</a>
+            </div>
           </div>
-        ))}
+        </div>
+      </div>
+      <div className={selected ? "registration__container " : "registration__container selected "}>
+        <div className="login__title">REGISTRATION</div>
+        <div className="login__block__registration">
+          <div className="input__blocks">
+            <div className="login__input">
+              <div className="input__text">Account name</div>
+              <input type="text" />
+            </div>
+            <div className="password__input">
+              <div className="input__text">Email</div>
+              <input type="text" />
+            </div>
+            <div className="password__input">
+              <div className="input__text">Password</div>
+              <input type="password" />
+            </div>
+            <div className="password__input">
+              <div className="input__text">Repead password</div>
+              <input type="password" />
+            </div>
+            <div className="error__text hide">
+              Please check your password and acount name and try again.
+            </div>
+            <div className="login__btn__submit">
+              <button>Registration</button>
+            </div>
+            <div className="help__btn">
+              <a href="/" onClick={(e)=>{changeSelected(e)}}>Back to login</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
