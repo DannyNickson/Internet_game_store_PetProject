@@ -113,7 +113,7 @@ header {
 .opened__list {
   display: none;
   position: absolute;
-  /* z-index: 20; */
+  background-color:#000 ;
 }
 
 .opened__list a{
@@ -128,3 +128,80 @@ header {
   border: 1px solid #000;
   box-shadow: 0 0 12px #000;
 }
+
+/*footer*/
+footer
+{
+  width: 70%;
+  height: 200px;
+  bottom: 0;
+  z-index: 0;
+  background-color: #171a21;
+}
+.footer__container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.copyrights__container
+{
+  margin: 10px 10px;
+  display: flex;
+  justify-content: left;
+  align-items:center;
+  color:#b8b6b4;
+  width: 60%;
+  height: 80px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+}
+
+.footer__menu{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 60%;
+}
+.footer__menu a{
+  padding: 10px;
+  font-size: 14px;
+  color: #b8b6b4;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+}
+.contacts img{
+  max-width: 25px;
+  max-height: 25px;
+}
+
+.contacts{
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contact_text{
+  margin: 10px;
+  font-size: 14px;
+  color: #b8b6b4;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+}
+.copyrights_text{
+  color: #b8b6b4;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  padding-left: 10px;
+}
+
+.copyrights_logo img{
+  max-width: 100px;
+  max-height: 50px;
+}
+
+/*end footer*/
