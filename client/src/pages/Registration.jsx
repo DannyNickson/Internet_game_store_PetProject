@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
-import CustomInput from "./../components/UI/CustomInput/CustomInput";
+import React from "react";
 import "../styles/pagesStyles/RegistrationPageStyles.css";
 import { useState } from "react";
-import UserService from "../API/UsersService";
-import CustomButton from "./../components/UI/CustomButton/CustomButton";
+
 
 const Registration = (props) => {
   const [selected, setSelected] = useState(true);
