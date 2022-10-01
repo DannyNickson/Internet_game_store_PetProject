@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/main.css";
 import logo_img from "../img/LOGO.png";
 import { useState } from "react";
+import { LOGIN_ROUTE } from "../utils/consts";
 const Header = () => {
   const [languageCard, setLanguageCard] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState("language");
@@ -14,7 +15,7 @@ const Header = () => {
     <header>
       <div className="header__container">
         <div className="top__menu">
-          <a href="/registration" className="login__link">
+          <a href={LOGIN_ROUTE} className="login__link">
             login |
           </a>
           <div className="language">
