@@ -1,0 +1,31 @@
+.input__block input {
+  width: 550px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #32353c;
+  outline: none;
+  border: 1px solid #32353c;
+  border-radius: 2px;
+  color: #fff;
+  padding: 10px;
+  margin: 0 0 10px;
+}
+.input__block.error input {
+  border-color: #c15755;
+}
+
+.input__block .input__text {
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  color: #afafaf;
+  text-transform: uppercase;
+  padding: 5px 0 5px;
+}
+
+.input__block .input__text__blue {
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  color: #1999ff;
+  text-transform: uppercase;
+  padding: 10px 0 5px;
+}
