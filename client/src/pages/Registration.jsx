@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/pagesStyles/RegistrationPageStyles.css";
 import { useState } from "react";
 import { LOGIN_ROUTE } from "../utils/consts";
+import CustomInput from './../components/UI/CustomInput/CustomInput';
 
 const Registration = (props) => {
   const [email, setEmail] = useState("");
@@ -16,7 +17,7 @@ const Registration = (props) => {
       setIsError(true);
       return;
     }
-    if (password != passwordToCompare) {
+    if (password !== passwordToCompare) {
       setIsError(true);
       return;
     }
@@ -36,42 +37,10 @@ const Registration = (props) => {
           <div className="login__title">REGISTRATION</div>
           <div className="login__block__registration">
             <div className="input__blocks">
-              <div className={"login__input " + (isError ? "error" : " ")}>
-                <div className="input__text">Account name</div>
-                <input
-                  type="text"
-                  onChange={(e) => {
-                    setNickname(e.target.value);
-                  }}
-                />
-              </div>
-              <div className={"password__input " + (isError ? "error" : " ")}>
-                <div className="input__text">Email</div>
-                <input
-                  type="text"
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                />
-              </div>
-              <div className={"password__input " + (isError ? "error" : " ")}>
-                <div className="input__text">Password</div>
-                <input
-                  type="password"
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
-                />
-              </div>
-              <div className={"password__input " + (isError ? "error" : " ")}>
-                <div className="input__text">Repead password</div>
-                <input
-                  type="password"
-                  onChange={(e) => {
-                    setPasswordToCompare(e.target.value);
-                  }}
-                />
-              </div>
+              <CustomInput isError={isError} setNickname={setNickname} typeOfInput={"text"} inputText={"Account name"} isBlue={true}/>
+              <CustomInput isError={isError} setNickname={setEmail} typeOfInput={"text"} inputText={"Email"} isBlue={false}/>
+              <CustomInput isError={isError} setNickname={setPassword} typeOfInput={"password"} inputText={"Password"} isBlue={false}/>
+              <CustomInput isError={isError} setNickname={setPasswordToCompare} typeOfInput={"password"} inputText={"Repead password"} isBlue={false}/>
               <div className={"error__text " + (isError ? " " : "hide")}>
                 Please check your password and acount name and try again.
               </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import { REGISTRATION_ROUTE } from "./../utils/consts";
 import { useState } from "react";
+import "../styles/pagesStyles/RegistrationPageStyles.css";
+import CustomInput from "./../components/UI/CustomInput/CustomInput";
 
 const Auth = () => {
   const [nickname, setNickname] = useState("");
@@ -28,28 +30,20 @@ const Auth = () => {
         >
           <div className="login__block">
             <div className="input__blocks">
-              <div className={isError ? "login__input error" : "login__input"}>
-                <div className="input__text">Sing in whith account name</div>
-                <input
-                  type="text"
-                  onChange={(e) => {
-                    setNickname(e.target.value);
-                  }}
-                />
-              </div>
-              <div
-                className={
-                  isError ? "password__input error" : "password__input"
-                }
-              >
-                <div className="input__text">Password</div>
-                <input
-                  type="password"
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
-                />
-              </div>
+              <CustomInput
+                isError={isError}
+                setNickname={setNickname}
+                typeOfInput={"text"}
+                inputText={"Sing in whith account name"}
+                isBlue={true}
+              />
+              <CustomInput
+                isError={isError}
+                setNickname={setPassword}
+                typeOfInput={"password"}
+                inputText={"Password"}
+                isBlue={false}
+              />
               <div className="login__btn__submit">
                 <button type="submit">Sing in</button>
               </div>
