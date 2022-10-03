@@ -1,103 +1,59 @@
-import React, { useEffect } from "react";
-import CustomInput from "./UI/CustomInput/CustomInput";
-import "../styles/App.css";
+import React from "react";
+import "../styles/pagesStyles/RegistrationPageStyles.css";
 import { useState } from "react";
-import CustomButton from "./UI/CustomButton/CustomButton";
-import UserService from "../API/UsersService";
+import { LOGIN_ROUTE } from "../utils/consts";
+import CustomInput from './../components/UI/CustomInput/CustomInput';
 
 const Registration = (props) => {
-  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
+  const [nickname, setNickname] = useState("");
   const [password, setPassword] = useState("");
-  const [errorVisible, setErrorVisible] = useState({ status: false, text: "" });
-  const [users, setUsers] = useState([
-    { id: 1, username: "MrDD", email: "puchkovdd@gmail.com" },
-  ]);
+  const [passwordToCompare, setPasswordToCompare] = useState("");
+  const [isError, setIsError] = useState(false);
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
-  async function fetchUsers() {
-    const allUsers = await UserService.getAll();
-    setUsers([...allUsers]);
-  }
-
-  async function sendData(username, email, password) {
-    if (!username || !email || !password) {
-      setErrorVisible({ status: true, text: "Не задано поле" });
+  async function submitForm(e) {
+    e.preventDefault();
+    if (!email || !nickname || !password || !passwordToCompare) {
+      setIsError(true);
       return;
     }
-    errorVisible.status
-      ? setErrorVisible({ status: false, text: "" })
-      : setErrorVisible({ status: false });
-    const responese = await UserService.registrationUser({
-      username,
-      email,
-      password,
-    });
-    setAllClear(users,responese.data)
-  }
-
-  function setAllClear(users, data) {
-    setUsers([...users, data]);
-    setEmail(" ");
-    setPassword(" ");
-    setUsername(" ");
+    if (password !== passwordToCompare) {
+      setIsError(true);
+      return;
+    }
+    console.log("send for registration");
+    setIsError(false);
   }
 
   return (
-    <div className="conteiner">
-      <div className={errorVisible.status ? " errorVisible active" : "hide"}>
-        <h1 className="errorText">{errorVisible.text}</h1>
-      </div>
-      <div className="input__conteiner">
-        <div className="input__text">Input your username:</div>
-        <CustomInput
-          onChange={(e) => {
-            setUsername(e.target.value);
-          }}
-          type="text"
-          placeholder="username"
-        />
-      </div>
-      <div className="input__conteiner">
-        <div className="input__text">Input your email:</div>
-        <CustomInput
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          type="text"
-          placeholder="email"
-        />
-      </div>
-      <div className="input__conteiner">
-        <div className="input__text">Input your password:</div>
-        <CustomInput
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          type="password"
-          placeholder="password"
-        />
-      </div>
-      <div className="button__container">
-      <CustomButton
-        onClick={() => {
-          sendData(username, email, password);
+    <div className="main__block">
+      <form
+        action="/"
+        onSubmit={(e) => {
+          submitForm(e);
         }}
       >
-        Send
-      </CustomButton>
-      </div>
-      <div className="user__container">
-        {users.map((user) => (
-          <div className="user__block" key={user.id}>
-            <div className="user__title">{user.username}</div>
-            <div className="user__email">{user.email}</div>
+        <div className={"registration__container selected "}>
+          <div className="login__title">REGISTRATION</div>
+          <div className="login__block__registration">
+            <div className="input__blocks">
+              <CustomInput isError={isError} setNickname={setNickname} typeOfInput={"text"} inputText={"Account name"} isBlue={true}/>
+              <CustomInput isError={isError} setNickname={setEmail} typeOfInput={"text"} inputText={"Email"} isBlue={false}/>
+              <CustomInput isError={isError} setNickname={setPassword} typeOfInput={"password"} inputText={"Password"} isBlue={false}/>
+              <CustomInput isError={isError} setNickname={setPasswordToCompare} typeOfInput={"password"} inputText={"Repead password"} isBlue={false}/>
+              <div className={"error__text " + (isError ? " " : "hide")}>
+                Please check your password and acount name and try again.
+              </div>
+              <div className="login__btn__submit">
+                <button type="submit">Registration</button>
+              </div>
+              <div className="help__btn">
+                <a href={LOGIN_ROUTE}>Back to login</a>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
+        </div>
+      </form>
     </div>
   );
 };

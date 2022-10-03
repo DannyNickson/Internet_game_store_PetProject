@@ -4,6 +4,7 @@ import CatalogPage from './../pages/CatalogPage';
 import Auth from './../pages/Auth';
 import GamePage from './../pages/GamePage';
 import NotFoundPage from './../pages/NotFoundPage';
+import Registration from './../pages/Registration';
 
 export const authRoutes = [
     {
@@ -27,7 +28,7 @@ export const publicRoutes = [
     },
     {
         path: REGISTRATION_ROUTE,
-        element: Auth,
+        element: Registration,
         exact: true,
     },
     {
