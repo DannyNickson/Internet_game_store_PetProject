@@ -1,0 +1,172 @@
+.catalog__page__main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+.block {
+  border-top: 1px solid #171a21;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(42, 71, 94, 0.7) 5%,
+    rgba(42, 71, 94, 0) 70%
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+.banner__block {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 90px;
+  z-index: 100;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background: linear-gradient(
+    90deg,
+    rgba(62, 103, 150, 0.919) 11.38%,
+    rgba(58, 120, 177, 0.8) 25.23%,
+    rgb(15, 33, 110) 100%
+  );
+}
+
+.menu__submenu {
+  min-width: 40px;
+  padding: 0px 10px 0px 10px;
+}
+
+.menu__submenu:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(33, 162, 255, 0.25) 0%,
+    rgba(33, 162, 255, 0.15) 50%,
+    rgba(50, 50, 51, 0) 100%
+  );
+}
+
+.menu__submenu a {
+  color: #e5e5e5;
+  font-size: 16px;
+  line-height: 35px;
+  text-shadow: 0px 2px 3px rgb(0 0 0 /30%);
+}
+
+.search {
+  margin-left: 150px;
+}
+.search input {
+  background-color: #316282;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 0px rgb(255 255 255 /10%);
+  margin-bottom: 0px;
+  outline: none;
+  height: 30px;
+  color: #0e1c25;
+  font-size: 14px;
+  margin-top: 1px;
+  text-shadow: 1px 1px 0px rgb(255 255 255 /10%);
+  font-weight: 300;
+  padding-left: 5px;
+
+}
+
+.search input:focus {
+  border: none;
+  color: #eeee;
+  outline: none;
+  line-height: 30px;
+}
+
+.submenu {
+  position: absolute;
+  display: none;
+  background:rgb(75, 74, 74);
+}
+
+.menu__submenu:hover .submenu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border:1px solid rgb(75, 74, 74);
+  padding: 2px 15px 0px 10px;
+  box-shadow: 0 0 12px #000;
+  z-index: 10;
+}
+
+.menu__submenu:hover .submenu a{
+    color: #c6d4df;
+    font-size: 14px;
+}
+
+.menu__submenu:hover .submenu a:hover{
+    text-decoration: underline;
+}
+
+
+.sliders__block{
+    display: flex;
+    justify-content: center;
+
+}
+.sliders__block__main
+{
+    margin-top: 40px;
+    width: 70%;
+    display: flex;
+}
+
+.side__menu
+{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+}
+.gift__cards__img{
+    height: 120px
+}
+.gift__cards__text
+{
+    color: darkgray;
+    text-decoration: none;
+    font-size: 12px;
+}
+.link__to__buy{
+    margin: 5px 0 14px 0;
+   
+}
+
+.link__to__buy a{
+    color: #66c0f4;
+   font-size: 14px;
+}
+
+.group__title
+{
+    margin:20px 0 5px ;
+    color: darkgray;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav__group .links{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__group .links a{
+    color: #66c0f4;
+   font-size: 14px;
+   margin: 10px 0px 2px 0px;
+}
+
+.nav__group .links a:hover{
+    color: #ffff;
+}

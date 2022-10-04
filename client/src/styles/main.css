@@ -6,6 +6,11 @@ header {
   top: 0;
   z-index: 20;
 }
+
+a:hover{
+  color: #fff;
+}
+
 .header__container {
   display: flex;
   flex-direction: column;
@@ -35,6 +40,11 @@ header {
   padding: 2px;
   cursor: pointer;
 }
+.language__select:hover {
+  color:#fff
+}
+
+
 .low__menu {
   padding: 5px;
   display: flex;
@@ -56,6 +66,11 @@ header {
   font-family: "Courier New", Courier, monospace;
   cursor: pointer;
 }
+
+.nav__bar a:hover {
+  color: #fff;
+}
+
 .subnav{
     display: inline-block;
     align-items: center;
@@ -106,6 +121,10 @@ header {
   padding-left: 5px;
 }
 
+.language__list a:hover {
+  color: #fff;
+}
+
 .language {
   display: flex;
   flex-direction: column;
@@ -119,6 +138,10 @@ header {
 
 .opened__list a{
     font-size: 16px;
+} 
+
+.opened__list a:hover{
+  color: #fff;
 } 
 
 .opened__list.opened{
@@ -174,6 +197,11 @@ footer
   font-family: "Courier New", Courier, monospace;
   cursor: pointer;
 }
+
+.footer__menu a:hover{
+  color: #fff;
+}
+
 .contacts img{
   max-width: 25px;
   max-height: 25px;
@@ -192,6 +220,10 @@ footer
   color: #b8b6b4;
   text-decoration: none;
   font-family: "Courier New", Courier, monospace;
+}
+
+.contact_text:hover{
+  color: #fff;
 }
 .copyrights_text{
   color: #b8b6b4;
