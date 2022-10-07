@@ -53,3 +53,65 @@
 }
 
 /*end variant on catalog page*/
+
+/*varian side menu*/
+
+.sidemenu__nav__giftcard
+{
+  margin: 5px 0 15px 0;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+.sidemenu__nav__giftcard span{
+  margin: 20px 0px 15px 0px;
+  color: darkgray;
+  font-size: 12px;
+}
+
+.sidemenu__nav__giftcard div{
+  display: flex;
+  align-items: center;
+}
+
+.sidemenu__nav__giftcard div a {
+  color: #66c0f4;
+  font-size: 14px;
+}
+
+.sidemenu__nav__giftcard div a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.sidemenu__nav
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.sidemenu__nav span {
+  margin: 20px 0 5px;
+  color: darkgray;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidemenu__nav div {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidemenu__nav div a {
+  color: #66c0f4;
+  font-size: 14px;
+  margin: 10px 0px 2px 0px;
+}
+
+.sidemenu__nav div a:hover {
+  color: #ffff;
+}
+
+
+/*end of varian side menu*/

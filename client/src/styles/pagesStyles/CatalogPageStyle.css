@@ -14,48 +14,8 @@
   display: flex;
 }
 
-.side__menu {
-  display: flex;
-  flex-direction: column;
-  width: 220px;
-}
 .gift__cards__img {
   height: 120px;
-}
-.gift__cards__text {
-  color: darkgray;
-  text-decoration: none;
-  font-size: 12px;
-}
-.link__to__buy {
-  margin: 5px 0 14px 0;
-}
-
-.link__to__buy a {
-  color: #66c0f4;
-  font-size: 14px;
-}
-
-.group__title {
-  margin: 20px 0 5px;
-  color: darkgray;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.nav__group .links {
-  display: flex;
-  flex-direction: column;
-}
-
-.nav__group .links a {
-  color: #66c0f4;
-  font-size: 14px;
-  margin: 10px 0px 2px 0px;
-}
-
-.nav__group .links a:hover {
-  color: #ffff;
 }
 .sliders {
   display: flex;

@@ -33,7 +33,7 @@ const TopMenu = () => {
           </CustomNav>
           <CustomNav
             title="Categories"
-            titleLink=""
+            titleLink={SHOP_ROUTE}
             variant="catalog__submenu__blue"
           />
           <CustomNav
