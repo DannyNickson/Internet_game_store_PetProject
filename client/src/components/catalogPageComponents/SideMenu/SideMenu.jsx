@@ -1,11 +1,13 @@
 import React from "react";
 import CustomNav from "../../UI/CustomNav/CustomNav";
 import classes from "./SideMenu.module.css";
+import steamCardPromo from '../../../img/steamcards_promo_02.png'
 const SideMenu = () => {
   return (
     <div className={classes.side__menu}>
       <div className="gift__cards__img">
-        <img src="" alt="gift__cards__img" />
+        <img src={steamCardPromo} alt="gift__cards__img" />
+        <hr/>
       </div>
       <CustomNav title="GIFT CARDS" variant="sidemenu__nav__giftcard">
         <div>

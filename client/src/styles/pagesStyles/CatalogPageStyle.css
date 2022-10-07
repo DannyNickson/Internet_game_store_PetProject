@@ -16,7 +16,22 @@
 
 .gift__cards__img {
   height: 120px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
 }
+.gift__cards__img img {
+  width: 210px;
+  height: 120px;
+}
+
+.gift__cards__img hr
+{
+  border:1px solid rgb(82, 82, 255);
+  box-shadow: 0 0 2px rgb(82, 82, 255);
+  margin-top: 0;
+}
+
 .sliders {
   display: flex;
   align-items: baseline;

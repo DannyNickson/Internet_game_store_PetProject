@@ -50,6 +50,9 @@
 
 .catalog__submenu__blue:hover div a:hover {
   text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: white;
+  text-decoration-skip: 2px;
 }
 
 /*end variant on catalog page*/
