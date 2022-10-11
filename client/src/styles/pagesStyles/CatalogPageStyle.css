@@ -71,3 +71,9 @@
   justify-content: center;
   margin-top: 10px;
 }
+.sliders {
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  flex-direction: column;
+}
