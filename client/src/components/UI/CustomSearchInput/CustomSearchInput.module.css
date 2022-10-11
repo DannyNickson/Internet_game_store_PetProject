@@ -1,0 +1,34 @@
+.search__block {
+    position: relative;
+  }
+  .search__block input {
+    background-color: #316282;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 0px rgb(255 255 255 /10%);
+    outline: none;
+    height: 30px;
+    color: #0e1c25;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px rgb(255 255 255 /10%);
+    font-weight: 300;
+    margin: 2px;
+    padding: 5px;
+  }
+  
+  .search__block input:focus {
+    border: none;
+    color: #eeee;
+    outline: none;
+    line-height: 30px;
+  }
+
+  .search__block a{
+    position: absolute;
+    margin: 4px;
+    right: 0;
+  }
+  .search__block img{
+    width: 25px;
+    height: 25px;
+  }

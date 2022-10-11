@@ -1,0 +1,19 @@
+.banner__block {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 10;
+    margin: 3% 0 1% 0;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background: linear-gradient(
+      90deg,
+      rgba(62, 103, 150, 0.919) 11.38%,
+      rgba(58, 120, 177, 0.8) 25.23%,
+      rgb(15, 33, 110) 100%
+    );
+  }
