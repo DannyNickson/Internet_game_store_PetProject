@@ -11,12 +11,11 @@ const CustomSlider = ({
   buttonTitle = "",
   buttonLink = "",
   numberOfSlides = 1,
-  activeSlide = 1,
 }) => {
   const [active,setActive] = useState(1)
   function changeActive(direction) {
     if (direction == "right") {
-      if (activeSlide == numberOfSlides) {
+      if (active == numberOfSlides) {
         setActive(1);
       } else {
         setActive((prev) => {
@@ -24,7 +23,7 @@ const CustomSlider = ({
         });
       }
     } else if (direction == "left") {
-      if (activeSlide == 1) {
+      if (active == 1) {
         setActive(numberOfSlides);
       } else {
         setActive((prev) => {
@@ -58,7 +57,7 @@ const CustomSlider = ({
       <SliderDots
         numberOfSlides={numberOfSlides}
         changeActive={setActive}
-        activeSlide={activeSlide}
+        activeSlide={active}
       />
     </div>
   );

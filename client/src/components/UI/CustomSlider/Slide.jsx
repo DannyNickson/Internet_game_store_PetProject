@@ -48,6 +48,7 @@ const Slide = ({
                         setActiveImg(gameObject.screenShots[0]);
                         setChanged(false);
                       }}
+                      key={"screenshot_" + curr}
                     />
                   );
                 }

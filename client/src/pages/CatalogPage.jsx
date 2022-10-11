@@ -15,7 +15,7 @@ const CatalogPage = () => {
         <div className="slider__blocks">
           <SideMenu/>
           <div className="sliders">
-            <CustomSlider title="Featured & Recommended" numberOfSlides={$FixThis.length} variant="top__slider"/>
+            <CustomSlider title="Featured & Recommended" numberOfSlides={$FixThis.length}/>
           </div>
         </div>
       </BackgroundBlock>
