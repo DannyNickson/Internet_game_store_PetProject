@@ -1,0 +1,79 @@
+.catalog__page__main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+.sliders__block {
+  display: flex;
+  justify-content: center;
+}
+.sliders__block__main {
+  margin-top: 40px;
+  width: 70%;
+  display: flex;
+}
+
+.gift__cards__img {
+  height: 120px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+}
+.gift__cards__img img {
+  width: 210px;
+  height: 120px;
+}
+
+.gift__cards__img hr {
+  border: 1px solid rgb(82, 82, 255);
+  box-shadow: 0 0 2px rgb(82, 82, 255);
+  margin-top: 0;
+}
+
+
+.lower__slider {
+  position: relative;
+  min-width: 1000px;
+  min-height: 500px;
+  margin-left: 60px;
+}
+
+.slide__block {
+  width: auto;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+}
+
+.bigger__block {
+  width: 350px;
+  height: auto;
+}
+.block__img img {
+  width: 350px;
+  height: 350px;
+}
+
+.normal__slide__block img {
+  width: 300px;
+  height: 150px;
+}
+
+.normal__slide__blocks {
+  display: grid;
+  margin: 10px;
+  grid-template-columns: repeat(2, 350px);
+  grid-template-rows: repeat(2, 250px);
+}
+.slider__blocks {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.sliders {
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  flex-direction: column;
+}
