@@ -1,214 +1,240 @@
 .top__slider {
-    position: relative;
-    min-width: 1000px;
-    min-height: 500px;
-    margin-left: 60px;
-  }
-  .slider__title {
-    color: white;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-  }
-  .arrow__left {
-    position: absolute;
-    top: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: -65px;
-    font-size: 34px;
-    color: white;
-    width: 55px;
-    height: 100px;
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.1)
-    );
-  }
-  .arrow__left:hover {
-    background: linear-gradient(
-      90deg,
-      rgba(142, 238, 255, 0.65),
-      rgba(142, 238, 255, 0.25),
-      rgba(142, 238, 255, 0.1)
-    );
-    cursor: pointer;
-  }
-  
-  .arrow__left div {
-    background-image: url("../../../img/arrows.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-x: -23px;
-    height: 40px;
-    width: 50px;
-    margin-left: 15px;
-  }
-  
-  .arrow__right {
-    position: absolute;
-    top: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: -65px;
-    font-size: 34px;
-    color: white;
-    width: 55px;
-    height: 100px;
-    background: linear-gradient(
-      270deg,
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.1)
-    );
-  }
-  
-  .arrow__right:hover {
-    background: linear-gradient(
-      270deg,
-      rgba(142, 238, 255, 0.65),
-      rgba(142, 238, 255, 0.25),
-      rgba(142, 238, 255, 0.1)
-    );
-    cursor: pointer;
-  }
-  
-  .arrow__right div {
-    background-image: url("../../../img/arrows.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-x: 17px;
-    height: 40px;
-    width: 50px;
-    margin-right: 15px;
-  }
-  
-  .slider__dots {
-    height: 40px;
-    width: auto;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    margin-top: 7px;
-  }
-  
-  .slider__dots div {
-    width: 22px;
-    height: 12px;
-    background: rgba(82, 82, 82, 0.45);
-    margin: 3px;
-    border-radius: 3px;
-  }
-   .slider__dots span {
-    background-color: rgba(82, 82, 82, 0.9);
-    width: 22px;
-    height: 12px;
-    margin: 3px;
-    border-radius: 3px;
-  }
-  
-  .slider__dots div:hover {
-    background: rgba(82, 82, 82, 0.75);
-  }
+  position: relative;
+  min-width: 1000px;
+  min-height: 500px;
+  margin-left: 60px;
+}
+.slider__title {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.arrow__left {
+  position: absolute;
+  top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -65px;
+  font-size: 34px;
+  color: white;
+  width: 55px;
+  height: 100px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+.arrow__left:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(142, 238, 255, 0.65),
+    rgba(142, 238, 255, 0.25),
+    rgba(142, 238, 255, 0.1)
+  );
+  cursor: pointer;
+}
 
-  .recomended__slide {
-    display: none;
-  }
-  
-  .recomended__slide__active {
-    display: block;
-    border: 1px solid black;
-    box-shadow: 0 0 7px 0px black;
-    animation: fade;
-    animation-duration: 1s;
-  }
+.arrow__left div {
+  background-image: url("../../../img/arrows.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: -23px;
+  height: 40px;
+  width: 50px;
+  margin-left: 15px;
+}
 
-  @keyframes fade{
-    from{opacity: 0.2;}
-    to{opacity: 1;}
-  }
-  
-  .recomended__slide__active a {
-    display: flex;
-    flex-direction: row;
-  }
-  .main__img {
-    width: 650px;
-    height: 350px;
-  }
-  
-  .main__img img {
-    width: 650px;
-    height: 350px;
-  }
-  
-  .secondary__block {
-    display: flex;
-    padding: 2px;
-    margin-left: 2px;
-    flex-direction: column;
-    width: calc(100% - 650px);
-    background: rgba(0, 0, 0, 0.35);
-    color: white;
-  }
-  
-  .secondary__block .game__title {
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    margin: 25px 0 25px 15px;
-  }
-  
-  .screenshots__group {
-    display: grid;
-    grid-template-columns: repeat(2, 175px);
-    grid-template-rows: repeat(2, 80px);
-  }
-  
-  .screenshots__group img {
-    margin: 10px;
-    width: 165px;
-    height: 70px;
-  }
-  
-  .secondary__block .game__status {
-    margin: 10px 0 5px 15px;
-    font-size: 20px;
-  }
-  
-  .secondary__block .game__tag {
-    margin: 0 0 0 15px;
-    padding: 3px;
-    max-width: fit-content;
-    background: rgb(66, 66, 66);
-    border-radius: 3px;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-  }
-  
-  .prive__platform__block {
-    margin: 20px 10px 0px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .platforms {
-    display: flex;
-    align-items: center;
-  }
-  .platforms span {
-    width: 25px;
-    height: 25px;
-    margin: 2px;
-    background: url("../../../img/icon_platform_win.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+.arrow__right {
+  position: absolute;
+  top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -65px;
+  font-size: 34px;
+  color: white;
+  width: 55px;
+  height: 100px;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.1)
+  );
+}
 
-  
+.arrow__right:hover {
+  background: linear-gradient(
+    270deg,
+    rgba(142, 238, 255, 0.65),
+    rgba(142, 238, 255, 0.25),
+    rgba(142, 238, 255, 0.1)
+  );
+  cursor: pointer;
+}
+
+.arrow__right div {
+  background-image: url("../../../img/arrows.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: 17px;
+  height: 40px;
+  width: 50px;
+  margin-right: 15px;
+}
+
+.slider__dots {
+  height: 40px;
+  width: auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+.slider__dots div {
+  width: 22px;
+  height: 12px;
+  background: rgba(82, 82, 82, 0.45);
+  margin: 3px;
+  border-radius: 3px;
+}
+.slider__dots span {
+  background-color: rgba(82, 82, 82, 0.9);
+  width: 22px;
+  height: 12px;
+  margin: 3px;
+  border-radius: 3px;
+}
+
+.slider__dots div:hover {
+  background: rgba(82, 82, 82, 0.75);
+}
+
+.recomended__slide {
+  display: none;
+}
+
+.recomended__slide__active {
+  display: block;
+  border: 1px solid black;
+  box-shadow: 0 0 7px 0px black;
+  animation: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.recomended__slide__active a {
+  display: flex;
+  flex-direction: row;
+}
+.main__img {
+  width: 650px;
+  height: 350px;
+  animation: show;
+  animation-duration: 1s;
+}
+
+@keyframes show {
+  from{opacity: 0.3;}
+  to{opacity: 1;}
+}
+
+.main__img__changed{
+  width: 650px;
+  height: 350px;
+  animation: hide;
+  animation-duration: 1s;
+}
+
+@keyframes hide {
+  from{opacity: 0.3;}
+  to{opacity: 1;}
+}
+
+.main__img img {
+  width: 650px;
+  height: 350px;
+}
+
+.main__img__changed img {
+  width: 650px;
+  height: 350px;
+}
+
+.secondary__block {
+  display: flex;
+  padding: 2px;
+  margin-left: 2px;
+  flex-direction: column;
+  width: calc(100% - 650px);
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
+}
+
+.game__title {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  margin: 25px 0 25px 15px;
+}
+
+.screenshots__group {
+  display: grid;
+  grid-template-columns: repeat(2, 175px);
+  grid-template-rows: repeat(2, 80px);
+}
+
+.screenshots__group img {
+  margin: 10px;
+  width: 165px;
+  height: 70px;
+}
+
+.game__status {
+  margin: 10px 0 5px 15px;
+  font-size: 20px;
+}
+
+.game__tag {
+  margin: 0 0 0 15px;
+  padding: 3px;
+  max-width: fit-content;
+  background: rgb(66, 66, 66);
+  border-radius: 3px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.prive__platform__block {
+  margin: 20px 10px 0px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.platforms {
+  display: flex;
+  align-items: center;
+}
+.platforms span {
+  width: 25px;
+  height: 25px;
+  margin: 2px;
+  background: url("../../../img/icon_platform_win.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
