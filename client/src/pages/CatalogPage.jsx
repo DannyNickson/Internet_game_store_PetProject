@@ -4,6 +4,7 @@ import TopMenu from "../components/catalogPageComponents/TopMenu/TopMenu";
 import BackgroundBlock from './../components/BackgroundBlock';
 import SideMenu from '../components/catalogPageComponents/SideMenu/SideMenu';
 import CustomSlider from "../components/UI/CustomSlider/CustomSlider";
+import GameListCatalog from "../components/catalogPageComponents/GameListCatalog/GameListCatalog";
 
 
 const CatalogPage = () => {
@@ -16,6 +17,7 @@ const CatalogPage = () => {
           <SideMenu/>
           <div className="sliders">
             <CustomSlider title="Featured & Recommended" numberOfSlides={$FixThis.length}/>
+            <GameListCatalog/>
           </div>
         </div>
       </BackgroundBlock>
