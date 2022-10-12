@@ -1,6 +1,6 @@
 header {
   width: 100vh;
-  height: 170px;
+  height: 110px;
   position: relative;
   width: 70%;
   top: 0;
@@ -19,7 +19,7 @@ a:hover{
 .top__menu {
   margin: 5px;
   display: flex;
-  height: 30px;
+  height: 10px;
   justify-content: right;
   align-items: center;
   line-height: 24px;

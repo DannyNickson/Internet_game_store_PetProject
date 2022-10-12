@@ -12,10 +12,11 @@ const CatalogPage = () => {
   return (
     <div className="catalog__page__main">
       <BackgroundBlock>
-        <TopMenu/>
+        
         <div className="slider__blocks">
           <SideMenu/>
           <div className="sliders">
+            <TopMenu/>
             <CustomSlider title="Featured & Recommended" numberOfSlides={$FixThis.length}/>
             <GameListCatalog/>
           </div>
