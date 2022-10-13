@@ -1,6 +1,7 @@
 header {
-  width: 67%;
-  height: 100px;
+  width: 57%;
+  height: 105px;
+  z-index: 20;
 }
 .header__container {
   display: flex;
