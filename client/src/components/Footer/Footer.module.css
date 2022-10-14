@@ -1,0 +1,94 @@
+footer{
+    width: 46%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
+}
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px 15px 0px;
+    width: -webkit-fill-available;
+}
+
+.copyrights_logo{
+    height: 50px;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.copyrights_logo img{
+    height: 50px;
+    width: 125px;
+}
+.telegram{
+    width: 25px;
+    height: 20px;
+}
+.copyrights__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.footer__menu{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    align-items: center;
+}
+.footer__menu a:hover{
+    color: white;
+    cursor: pointer;
+}
+.footer__menu a{
+    color: rgba(255, 255, 255, 0.8);
+    margin: 2px 5px 2px 5px;
+    padding: 0px 10px 0 10px;
+}
+
+.footer__menu span:hover{
+    cursor: default;
+    color: white;
+}
+.footer__menu span
+{
+    color: white;
+    margin: 0px 5px 0 5px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.contacts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.copyrights_text{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    padding: 5px;
+}
+.footer__container hr{
+    border: 1px solid rgba(255, 255, 255, 0.185);;
+}
+
+.contact_text
+{
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 0px 5px;
+    padding: 0px 10px 0 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact__link{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    margin: 0px 5px 0px 5px;
+}
