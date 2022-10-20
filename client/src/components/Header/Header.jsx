@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/main.css";
-import logo_img from "../../img/LOGO.png";
+import logo_img from "../../img/LOGO_5.png";
 import { useState } from "react";
 import { LOGIN_ROUTE } from "../../utils/consts";
 import classes from "./Header.module.css";

@@ -1,10 +1,11 @@
 import Admin from "../pages/Admin";
-import { ADMIN_ROUTE, GAME_ROUTE, LOGIN_ROUTE, NOT_FOUND_PAGE, REGISTRATION_ROUTE, SHOP_ROUTE } from "../utils/consts";
+import { ADMIN_ROUTE, GAME_ROUTE, LOGIN_ROUTE, NOT_FOUND_PAGE, REGISTRATION_ROUTE, SHOP_ROUTE,CATALOG_SEARCH } from "../utils/consts";
 import CatalogPage from './../pages/CatalogPage';
 import Auth from './../pages/Auth';
 import GamePage from './../pages/GamePage';
 import NotFoundPage from './../pages/NotFoundPage';
 import Registration from './../pages/Registration';
+import CatalogSearch from './../pages/CatalogSearch';
 
 export const authRoutes = [
     {
@@ -40,5 +41,10 @@ export const publicRoutes = [
         path: NOT_FOUND_PAGE,
         element: NotFoundPage,
         exact: true,
+    },
+    {
+        path:CATALOG_SEARCH,
+        element:CatalogSearch,
+        exact:true
     },
 ];

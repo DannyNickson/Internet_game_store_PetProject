@@ -1,6 +1,6 @@
 import React from "react";
 import telegramLogo from "../../img/Telegram_logo.svg.webp";
-import logo from "../../img/LOGO.png";
+import logo from "../../img/LOGO_5.png";
 import classes from './Footer.module.css'
 const Footer = () => {
   return (

@@ -1,8 +1,11 @@
 .side__menu {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  left:-280px;
   width:10%;
   margin-right: 15px;
+  margin-left: 120px;
 }
 
 
