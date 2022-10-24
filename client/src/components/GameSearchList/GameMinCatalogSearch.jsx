@@ -1,10 +1,11 @@
 import React from "react";
 import classes from "./GameSearchList.module.css";
-const GameMinCatalogSearch = () => {
+import $FixThis from "../../img/doca2.png";
+const GameMinCatalogSearch = ({link}) => {
   return (
-    <div className={classes.game___min__container}>
+    <a href={link} className={classes.game___min__container}>
       <div className={classes.img__block}>
-        <img src="" alt="doca2" />
+        <img src={$FixThis} alt="doca2" />
       </div>
       <div className={classes.game__title}>DOTA 2</div>
       <div className={classes.game__datarelise}>9 Jul,2013</div>
@@ -14,7 +15,7 @@ const GameMinCatalogSearch = () => {
       <div className={classes.game__price}>
         <span>Free to play</span>
       </div>
-    </div>
+    </a>
   );
 };
 
