@@ -3,15 +3,15 @@ import classes from "./GameSearchList.module.css";
 import GameMinCatalogSearch from "./GameMinCatalogSearch";
 const GameSearchList = () => {
   let $FixThis = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-  const [activeArange, setActiveArange] = useState("Name");
   const [active, setActive] = useState(false);
-  const ClickSortBy=function(e)
-  {
+  const [activeArange,setActiveArange] = useState("Name");
+  const [activeFilter, setActiveFilter] = useState({1:false,2:false,3:false})
+  const ClickSortBy = function (e) {
     e.preventDefault();
     setActive((prev) => {
       return !prev;
     });
-  }
+  };
   return (
     <section>
       <div className={classes.game__list__container}>
@@ -25,14 +25,15 @@ const GameSearchList = () => {
               <span>Sort by</span>
               <div className={classes.arrange__list}>
                 <div className={classes.arrange__list__container__a__link}>
-                  <a
-                    href="/"
-                    onClick={ClickSortBy}
-                  >
+                  <a href="/" onClick={ClickSortBy}>
                     {activeArange}
                   </a>
                 </div>
-                <div className={classes['arrange__list' + (active ? "__active":"__hide")]}>
+                <div
+                  className={
+                    classes["arrange__list" + (active ? "__active" : "__hide")]
+                  }
+                >
                   <span
                     onClick={(e) => {
                       setActiveArange(e.target.innerText);
@@ -81,10 +82,52 @@ const GameSearchList = () => {
         <div className={classes.game__list__filters}>
           <div className={classes.filter__container}>
             <div className={classes.filter__submenu}>
+              <div className={classes.filter__submenu__title}>
               <span className={classes.filter__show__label}>
                 Narrow by Price
               </span>
-              <div className={classes.filter__submenu__hide}></div>
+              </div>
+              <div className={classes.filter__submenu__hide}>
+                <div className={classes.filter__submenu__handler}>
+                  price is 300 bucks
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={classes.filter__container}>
+            <div className={classes.filter__submenu} id="2" onClick={(e)=>{
+              let id = e.target.parentElement.id ? e.target.parentElement.id : e.target.parentElement.parentElement.id
+              let newArray = {...activeFilter}
+              newArray[id] = !newArray[id];
+              setActiveFilter({...newArray})
+            }}>
+            <div className={classes.filter__submenu__title}>
+              <span className={classes.filter__show__label}>
+                Narrow by Price
+              </span>
+               </div>
+              <div className={classes["filter__submenu" + (activeFilter[2] ? "__opened":"__hide")]}>
+                <div className={classes.filter__submenu__handler}>
+                  <span>price is 300 bucks</span>
+                  <span>price is 300 bucks</span>
+                  <span>price is 300 bucks</span>
+                  <span>price is 300 bucks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={classes.filter__container}>
+            <div className={classes.filter__submenu}>
+            <div className={classes.filter__submenu__title}>
+              <span className={classes.filter__show__label}>
+                Narrow by Price
+              </span>
+              </div>
+              <div className={classes.filter__submenu__hide}>
+                <div className={classes.filter__submenu__handler}>
+                  price is 300 bucks
+                </div>
+              </div>
             </div>
           </div>
         </div>
